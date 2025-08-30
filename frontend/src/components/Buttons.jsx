@@ -1,8 +1,8 @@
 import React from 'react'
-
-function Buttons({text,classname}) {
+import {Link} from 'react-router-dom'
+function Buttons({text,classname,url}) {
   return (
-   <button className={`outline-none rounded-md p-2 w-22 cursor-pointer ${classname}`}>{text}</button>
+   <Link to={url}><button className={`outline-none rounded-md p-2 w-22 cursor-pointer ${classname}`}>{text}</button> </Link>
   )
 }
 
