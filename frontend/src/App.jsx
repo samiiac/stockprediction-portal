@@ -6,9 +6,11 @@ import Footer from './components/Footer'
 import Register from "./components/Register";
 import Login from "./components/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AuthProvider from "./AuthProvider";
 
 function App() {
   return (
+    <AuthProvider>
     <div className="w-full bg-[#121212] p-2 flex flex-col justify-between items-center min-h-screen">
       <BrowserRouter>
         <Header />
@@ -20,6 +22,7 @@ function App() {
         <Footer />
       </BrowserRouter>
     </div>
+    </AuthProvider>
   );
 }
 

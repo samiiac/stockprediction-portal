@@ -31,11 +31,12 @@ function Register() {
     sendData();
   }
   return (
-    <div className="container max-w-[400px]">
-      <h1 className="text-white text-center mb-6 text-xl font-light">
+    <div className="container max-w-[400px] ">
+    
+      <div className="w-full p-3 bg-[#0e0e0e] rounded-lg border-1 border-[#363535]">
+        <h1 className="text-white text-center mb-6 text-xl font-light">
         Create an account.
       </h1>
-      <div className="w-full p-3 bg-[#0e0e0e] rounded-lg">
         <form
           className="p-3 flex flex-col text-white "
           onSubmit={handleRegistration}

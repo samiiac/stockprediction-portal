@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'rest_framework', #3rd
     'accounts',
     'api',
-    'corsheaders' #3rd
+    'corsheaders', #3rd
+    'rest_framework_simplejwt',#3rd
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173'
 ]
+
+REST_FRAMEWORK = {
+ 
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+       
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+    
+}
